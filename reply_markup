@@ -1,0 +1,10 @@
+{
+  "reply_markup": {
+    "inline_keyboard": [
+      [{
+        "text": "Buka Aplikasi",
+        "web_app": { "url": "https://your-webapp.com" }
+      }]
+    ]
+  }
+}
