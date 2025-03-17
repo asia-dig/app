@@ -1,22 +1,2 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
-
-def start(update: Update, context: CallbackContext) -> None:
-    keyboard = [
-        [InlineKeyboardButton("Option 1", callback_data='1')],
-        [InlineKeyboardButton("Option 2", callback_data='2')]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text("Choose an option:", reply_markup=reply_markup)
-
-def button(update: Update, context: CallbackContext) -> None:
-    query = update.callback_query
-    query.answer()
-    query.edit_message_text(text=f"Selected option: {query.data}")
-
-updater = Updater("7973622617:AAEnVPbdrzUr1hJ6niAtXWee_cIudAd4dtA")
-updater.dispatcher.add_handler(CommandHandler("start", start))
-updater.dispatcher.add_handler(CallbackQueryHandler(button))
-
-updater.start_polling('POST')
-updater.idle()
+{"ok":benar,"hasil":[{"id_pembaruan":168585266,
+"pesan":{"id_pesan":84,"dari":{"id":7704776010,"adalah_bot":false,"nama_depan":"ATM","nama_belakang":"MAMAK","nama_pengguna":"atmmamak","kode_bahasa":"id"},"obrolan":{"id":7704776010,"nama_depan":"ATM","nama_belakang":"MAMAK","nama_pengguna":"atmmamak","jenis":"pribadi"},"tanggal":1742238914,"teks":"/mulai","entitas":[{"offset":0,"panjang":6,"jenis":"perintah_bot"}]}}]}
