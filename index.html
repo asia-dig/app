@@ -9,3 +9,16 @@ function sharePost() {
     window.open(twitterUrl, "_blank");
 }
 </script>
+
+
+<button onclick="sharePost()">Share This Post</button>
+
+<script>
+function sharePost() {
+    const postUrl = encodeURIComponent(window.location.href);
+    const postTitle = encodeURIComponent(document.title);
+    const twitterUrl = https://facebook.com/vzn999/post`=${postTitle}`;
+    
+    window.open(twitterUrl, "_blank");
+}
+</script>
