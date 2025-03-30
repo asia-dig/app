@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live kami</title>
+    <style>
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }.chat-button:hover {
+        background-color: #1ebe5d;
+    }
+</style>
+
+</head>
+<body>
+    <button class="chat-button" onclick="startChat()">Chat Us</button>
+<script>
+    function startChat() {
+        window.open('https://wa.me/6282325152188', '_blank');
+    }
+</script>
+
+</body>
+</html>
