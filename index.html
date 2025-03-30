@@ -77,31 +77,8 @@
         <textarea id="detail" name="detail" rows="4"></textarea>
 
         <button type="submit">Kirim Formulir</button>
+<button onclick="sharePost()">Share This Post</button>
     </form>
 
 </body>
 </html>
-<button onclick="sharePost()">Share This Post</button>
-
-<script>
-function sharePost() {
-    const postUrl = encodeURIComponent(window.location.href);
-    const postTitle = encodeURIComponent(document.title);
-    const twitterUrl = `https://twitter.com/intent/tweet?url=${postUrl}&text=${postTitle}`;
-    
-    window.open(twitterUrl, "_blank");
-}
-</script>
-
-
-<button onclick="sharePost()">Share This Post</button>
-
-<script>
-function sharePost() {
-    const postUrl = encodeURIComponent(window.location.href);
-    const postTitle = encodeURIComponent(document.title);
-    const twitterUrl = https://facebook.com/vzn999/post`=${postTitle}`;
-    
-    window.open(twitterUrl, "_blank");
-}
-</script>
