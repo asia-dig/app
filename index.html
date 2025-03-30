@@ -1,3 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Rekber</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Formulir Rekening Bersama</h2>
+
+    <form action="proses_rekber.php" method="POST">
+        <label for="nama_pembeli">Nama Pembeli:</label>
+        <input type="text" id="nama_pembeli" name="nama_pembeli" required>
+
+        <label for="nama_penjual">Nama Penjual:</label>
+        <input type="text" id="nama_penjual" name="nama_penjual" required>
+
+        <label for="barang">Nama Barang / Jasa:</label>
+        <input type="text" id="barang" name="barang" required>
+
+        <label for="harga">Harga (Rp):</label>
+        <input type="number" id="harga" name="harga" required>
+
+        <label for="metode_pembayaran">Metode Pembayaran:</label>
+        <select id="metode_pembayaran" name="metode_pembayaran">
+            <option value="transfer_bank">Transfer Bank</option>
+            <option value="e-wallet">E-Wallet</option>
+            <option value="lainnya">Lainnya</option>
+        </select>
+
+        <label for="nomor_rek">Nomor Rekening Pembeli:</label>
+        <input type="text" id="nomor_rek" name="nomor_rek" required>
+
+        <label for="nomor_rek_penjual">Nomor Rekening Penjual:</label>
+        <input type="text" id="nomor_rek_penjual" name="nomor_rek_penjual" required>
+
+        <label for="detail">Detail Tambahan:</label>
+        <textarea id="detail" name="detail" rows="4"></textarea>
+
+        <button type="submit">Kirim Formulir</button>
+    </form>
+
+</body>
+</html>
 <button onclick="sharePost()">Share This Post</button>
 
 <script>
